@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Defines character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design -->
+  <title>Online Bookstore</title> <!-- Sets page title -->
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif; /* Use a modern font */
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #2d2d2d; /* Dark background for header */
+      color: white; /* White text color */
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow under header */
+    }
+    header h1 {
+      margin: 0; /* Removes default margin */
+      font-size: 2.5rem; /* Larger title text */
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline; /* Align items horizontally */
+      margin: 0 20px;
+    }
+    nav ul li a {
+      color: #fff; /* White text color for links */
+      font-size: 1.2rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline; /* Underline on hover */
+    }
+
+    /* Catalog Section */
+    #catalog {
+      display: grid; /* Use grid for layout */
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
+      gap: 20px;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    /* Book Card Styles */
+    .book {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow around book */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+      overflow: hidden;
+      padding: 20px;
+      text-align: center;
+    }
+    .book:hover {
+      transform: translateY(-10px); /* Hover effect to lift the book card */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+    }
+    .book img {
+      max-width: 100%; /* Make the image take full width */
+      height: auto;
+      border-radius: 8px; /* Rounded corners for images */
+    }
+    .book h3 {
+      font-size: 1.6rem; /* Larger title text */
+      margin: 15px 0;
+      color: #333;
+    }
+    .book p {
+      font-size: 1.1rem;
+      color: #666; /* Slightly lighter text color */
+      margin: 5px 0;
+    }
+    .book button {
+      background-color: #2d2d2d; /* Button with matching header color */
+      color: white; /* White text */
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px; /* Rounded button */
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease; /* Smooth color change on hover */
+    }
+    .book button:hover {
+      background-color: #555; /* Lighter button color on hover */
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #2d2d2d; /* Dark footer background */
+      color: white;
+      padding: 15px;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      width: 100%; /* Full width footer */
+    }
+
+    /* Contact Section Styles */
+    #contact {
+      background-color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    #contact h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    #contact p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+    #contact form input, #contact form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    #contact form button {
+      background-color: #2d2d2d;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+    }
+    #contact form button:hover {
+      background-color: #555;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav ul li {
+        margin: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Welcome to the Online Bookstore</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li> <!-- Link to Home -->
+        <li><a href="#catalog">Catalog</a></li> <!-- Link to Catalog -->
+        <li><a href="#contact">Contact</a></li> <!-- Link to Contact -->
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Catalog Section -->
+  <h2 style="text-align: center; font-size: 2rem; margin-top: 40px;">Book Catalog</h2>
+  <section id="catalog">
+    <!-- Individual Book Item -->
+    <article class="book">
+      <img src="https://images.pexels.com/photos/5473950/pexels-photo-5473950.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Book Title">
+      <h3>Book Title</h3>
+      <p>Author: Author Name</p>
+      <p>Price: $19.99</p>
+      <button>Add to Cart</button>
+    </article>
+
+    <article class="book">
+      <img src="https://images.pexels.com/photos/5473302/pexels-photo-5473302.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Book Title">
+      <h3>Book Title</h3>
+      <p>Author: Author Name</p>
+      <p>Price: $19.99</p>
+      <button>Add to Cart</button>
+    </article>
+    <article class="book">
+        <img src="https://images.pexels.com/photos/1181498/pexels-photo-1181498.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Book Title">
+        <h3>Book Title</h3>
+        <p>Author: Author Name</p>
+        <p>Price: $19.99</p>
+        <button>Add to Cart</button>
+      </article>
+
+    
+  
+      <article class="book">
+        <img src="https://images.pexels.com/photos/1181703/pexels-photo-1181703.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Book Title">
+        <h3>Book Title</h3>
+        <p>Author: Author Name</p>
+        <p>Price: $19.99</p>
+        <button>Add to Cart</button>
+      </article>
+  
+      <article class="book">
+        <img src="https://images.pexels.com/photos/256450/pexels-photo-256450.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Book Title">
+        <h3>Book Title</h3>
+        <p>Author: Author Name</p>
+        <p>Price: $19.99</p>
+        <button>Add to Cart</button>
+      </article>
+
+      <article class="book">
+        <img src="https://images.pexels.com/photos/2228560/pexels-photo-2228560.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Book Title">
+        <h3>Book Title</h3>
+        <p>Author: Author Name</p>
+        <p>Price: $19.99</p>
+        <button>Add to Cart</button>
+      </article>
+      
+      <article class="book">
+        <img src="https://images.pexels.com/photos/5473302/pexels-photo-5473302.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Book Title">
+        <h3>Book Title</h3>
+        <p>Author: Author Name</p>
+        <p>Price: $19.99</p>
+        <button>Add to Cart</button>
+      </article>
+  
+      
+  
+      <article class="book">
+        <img src="https://images.pexels.com/photos/5614135/pexels-photo-5614135.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Book Title">
+        <h3>Book Title</h3>
+        <p>Author: Author Name</p>
+        <p>Price: $19.99</p>
+        <button>Add to Cart</button>
+      </article>
+  
+      
+    </section>
+
+    <!-- Additional book articles can go here... -->
+
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have any questions? Feel free to reach out to us!</p>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Online Bookstore. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
